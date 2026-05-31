@@ -1,86 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head> 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rando Spézet 2026</title>
+    <link rel="icon" href="images/logo-spezet.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body> 
 
-        <title>Rando Spézet 2026</title>
-        <link rel="icon" href="images/logo-spezet.png" type="image/png">
-        <link rel="stylesheet" type="text/css" href="css\style.css"/>
+    <div class="div-titre">
+        <h1>Roc'h Toullaëron</h1>
+        <h2>Rendez-vous le dimanche <span class="yellow-upper">29 juin 2026</span>, à partir de 7h30 au stade de Spézet.</h2>
+    </div>
+        
+    <div class="flex">
+        <!-- COLONNE INFOS GÉNÉRALES -->
+        <div class="flex-elem">
+            <h2>ℹ️ Infos générales</h2>
+            <div class="texte">
+                <h3>Tarifs des inscriptions</h3>
+                
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">VTT Licenciés (FFCT/FFVélo)*</span>
+                        <span class="circuit-detail">5€</span>
+                    </div>
+                </div>
 
-    </head>
-    <body>
-        <div class="div-titre">
-            <h1>Roc'h Toullaëron</h1>
-            <h2>Rendez-vous le dimanche <span class="yellow-upper">28 juin 2026</span>.</h2>
-        </div>       
-        <div class="flex">
-            <div class="flex-elem infos">
-                <h2>Infos générales</h2>
-                <div class="texte">
-                    <h3>● Inscriptions</h3>
-                    <p class="flex-elem-p">Vous pouvez télécharger le bulletin d'inscription et le remplir avant pour ne pas avoir à le faire le matin.</p>
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">VTT Non-Licenciés*</span>
+                        <span class="circuit-detail">8€</span>
+                    </div>
                 </div>
-                <div class="texte">
-                    <h3>● Prix</h3>
-                    <p class="flex-elem-p">VTT : 5€ licenciés FFCT/FFVélo, 8€ sinon</p>
-                    <p class="flex-elem-p-wm">(gratuit pour les -16 ans*)</p>
-                    <p class="flex-elem-p">Marche : 5€</p>
-                    <p class="aste">*autorisation parentale obligatoire pour les mineurs</p>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">Trail*</span>
+                        <span class="circuit-detail">5€</span>
+                    </div>
                 </div>
-                <div class="texte">
-                    <h3>● Trail</h3>
-                    <p class="flex-elem-p">Les traileurs peuvent emprunter les circuits VTT et marche !</p>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">Marche</span>
+                        <span class="circuit-detail">5€</span>
+                    </div>
                 </div>
-                <div class="texte">
-                    <h3>● Autre</h3>
-                    <p class="flex-elem-p">Douches, lavage-vélo & casse-croûte offert à l'arrivée &#128519;</p>
-                </div>
+
+                <!-- Note de bas de page groupée style astérisque -->
+                <p class="aste">Gratuit pour les moins de 16 ans (*autorisation parentale obligatoire pour les mineurs)</p>
             </div>
-            <div class="flex-elem">
-                <h2>Circuits</h2>
-                <div class="texte">
-                    <h3>● VTT</h3>
-                    <p class="flex-elem-p">20 km : ~330m</p>
-                    <p class="flex-elem-p">27 km : ~500m</p>
-                    <p class="flex-elem-p">33 km : ~600m</p>
-                    <p class="flex-elem-p">38 km : ~775m</p>
-                    <p class="flex-elem-p">44 km : ~875m</p>
-                    <p class="flex-elem-p">50 km : ~1000m et + si affinités</p>
-                </div>
-                <div class="texte">
-                    <h3>● Ravitaillements</h3>
-                    <p class="flex-elem-p"><span>20 km :</span> km 10</p>
-                    <p class="flex-elem-p"><span>27 km :</span> km 8 et 16</p>
-                    <p class="flex-elem-p"><span>33 km :</span> km 14 et 21</p>
-                    <p class="flex-elem-p"><span>38 km :</span> km 8, 18 et 27</p>
-                    <p class="flex-elem-p"><span>44 km :</span> km 14, 25 et 33</p>
-                    <p class="flex-elem-p"><span>50 km :</span> km 14, 31 et 39</p>
-                </div>
-                <div class="texte">
-                    <h3>● Marche</h3>
-                    <p class="flex-elem-p">7 km : ~100m</p>
-                    <p class="flex-elem-p">11 km : ~200m</p>
-                    <p class="flex-elem-p">15 km : ~250m</p>
-                </div>
+            <div class="texte">
+                <h3>📝 Inscription</h3>
+                <p class="flex-elem-p">Pour la partie VTT et trail, vous pouvez télécharger le bulletin d'inscription plus bas et le remplir avant pour ne pas avoir à le faire le matin. Pour la marche, il faudra le faire sur place.</p>
             </div>
-            <div class="flex-elem">
-                <h2 id="documents">Documents</h2>
-                 <h3>À venir</h3>
-                <!-- <div class="documents">
-                    <a href="fichiers/bulletins.pdf" download target="_blank">Bulletins d'inscription</a>
-                </div>
-                <div class="documents">
-                    <a href="fichiers/bulletin-simple.pdf" download target="_blank">Bulletin d'inscription simple</a>
-                </div>
-                <div class="documents">
-                    <a href="fichiers/autorisations-parentale.pdf" download target="_blank">Autorisations parentale</a>
-                </div>
-                <div class="documents">
-                    <a href="fichiers/autorisation-parentale-simple.pdf" download target="_blank">Autorisation parentale simple</a>
-                </div> -->
+            <div class="texte">
+                <h3>📧 Contact</h3>
+                <p class="flex-elem-p">randospezet@gmail.com</p>
+            </div>
+            <div class="texte">
+                <h3>✨ Autre</h3>
+                <p class="flex-elem-p">Évidemment toujours nos beaux et sages ravitaillements, lavage vélos et bonhommes, casse-croûtes (gardés au frais !!) et surtout BUvette à l’arrivée.</p>
             </div>
         </div>
-    </body>
+
+        <!-- COLONNE CIRCUITS -->
+        <div class="flex-elem">
+            <h2>🗺️ Circuits</h2>
+            
+            <div class="discipline-section">
+                <h3 class="discipline-title">🚴 Circuits VTT</h3>
+                <p class="trail-mention">🏃 Trail possible sur tous les circuits <br>Priorité aux VTT par contre, laissez-les passer 😁. Aussi, sur les grands parcours, partez tôt, on ne vous laissera pas partir sur le 50 km après 8h !!</p>
+                
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">20 km</span>
+                        <span class="circuit-detail">~350m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillement :</span> km 10</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">27 km</span>
+                        <span class="circuit-detail">~550m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 8 et 16</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">32 km</span>
+                        <span class="circuit-detail">~650m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 13 et 21</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">38 km</span>
+                        <span class="circuit-detail">~950m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 8, 20 et 28</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">44 km</span>
+                        <span class="circuit-detail">~1000m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 14, 25 et 34</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">50 km</span>
+                        <span class="circuit-detail">~1250m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 14, 30 et 38</p>
+                </div>
+            </div>
+
+            <hr class="separator"> 
+            
+            <div class="discipline-section">
+                <h3 class="discipline-title">🥾 Circuits Marche</h3>
+                <p class="trail-mention">🏃 Trail possible sur tous les circuits</p>
+                
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">7 km</span>
+                        <span class="circuit-detail">~100m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Pas de ravitaillement</span></p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">11 km</span>
+                        <span class="circuit-detail">~190m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillement :</span> km 8</p>
+                </div>
+
+                <div class="circuit-item">
+                    <div class="circuit-header">
+                        <span class="circuit-name">15 km</span>
+                        <span class="circuit-detail">~250m D+</span>
+                    </div>
+                    <p class="circuit-ravito"><span>Ravitaillements :</span> km 8</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fin de la première rangée flex -->
+
+    <!-- BLOC DOCUMENTS -->
+    <div class="flex">
+        <div class="flex-elem">
+            <h2 id="documents">📂 Règlement et documents</h2>
+            <div class="documents-container">
+                <a href="fichiers/reglement.pdf" download target="_blank">📄 Règlement</a>
+                <a href="fichiers/bulletin-vtt.pdf" download target="_blank">📝 Bulletin d'inscription VTT</a>
+                <a href="fichiers/bulletin-trail.pdf" download target="_blank">📝 Bulletin d'inscription Trail</a>
+                <a href="fichiers/autorisation-parentale.pdf" download target="_blank">🪪 Autorisation parentale</a>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

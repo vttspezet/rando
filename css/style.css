@@ -1,161 +1,240 @@
-html {
-    height: 100%;
+/* ==========================================================================
+   VARIABLES ET CONFIGURATION GLOBALE
+   ========================================================================== */
+:root {
+    --bg-color: #1b1b1b;
+    --text-color: #ffffff;
+    --primary-color: #d9d911; /* Jaune */
+    --card-bg: rgba(255, 255, 255, 0.03); 
+    --font-main: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 body {
-    background-color: rgb(27, 27, 27);
-    color: rgb(255, 255, 255);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
-    margin: 0;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 4vh 20px;
     overflow-x: hidden;
-    overflow-y: scrolls;
-    height: 93vh;
+    overflow-y: auto;
 }
 
-.underline {
-    text-decoration: underline;
+/* ==========================================================================
+   TYPOGRAPHIE EN-TÊTE
+   ========================================================================== */
+.div-titre {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 5vh auto;
 }
 
 h1 {
-    font-size: 4rem;
-    margin: 10px 0px;
-    text-align: center;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin: 0 0 10px 0;
+    font-weight: 700;
 }
 
 h2 {
-    margin: 10px 4px;
-    text-align: center;
-}
-
-.div-titre {
-    height: 25vh;
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-#id_rdv {
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    margin: 0;
 }
 
 .yellow-upper {
-    color: rgb(217, 217, 17);
-    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
-@media screen and (max-width: 600px) {
-    .div-titre {
-        text-align: center;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    h2 {
-        font-size: 15px;
-    }
-    #id_rdv {
-        font-size: 1.4rem;
-    }
-    .yellow-upper {
-        font-size: 1.6rem;
-    }
-}
-
+/* ==========================================================================
+   STRUCTURE EN GRILLE / STRUCTURE DES CARTES
+   ========================================================================== */
 .flex {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.flex-elem  {
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    width: 35vw;
-    height: auto;
-    margin: 15px 20px;
-    padding: 20px;
-}
-
-.texte {
-    margin: 15px 0px;
-}
-
-.flex-elem h2 {
-    font-size: 30px;
-    text-align: center;
-    margin: 0px;
-    font-weight: bold;
-}
-
-.flex-elem h3 {
-    color: rgb(217, 217, 17);
-    margin: 0px;
-    font-size: 18px;
-}
-
-.flex-elem-p {
-    margin: 7px 30px 0px 15px;
-    text-align: justify;
-    line-height: 1.5em;
-}
-
-.flex-elem-p-wm {
-    margin: 0px 30px 0px 15px;
-    text-align: justify;
-    line-height: 1.4em;
-}  
-
-.aste {
-    margin: 7px 0px 0px 15px;
-    font-size: 12px;
-    text-align: right;
-    line-height: 1.5em;
-}
-
-@media screen and (max-width: 1100px) {
-    .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-    .flex-elem  {
-        width: 75vw;
-        height: auto;
-    }
-}
-
-#documents {
-    margin: 0px 0px 10px 0px;
-}
-
-.documents {
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
+    gap: 40px; /* Espace important et propre entre la carte gauche et droite */
+    max-width: 1300px;
+    margin: 0 auto 40px auto; /* Espace sous chaque rangée de blocs */
     flex-wrap: wrap;
 }
 
-a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgb(255,255,255);
-    color: black;
+.flex-elem {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1 1 500px; /* Donne une base large et équilibrée aux blocs */
+    max-width: 600px;
+    padding: 30px;
+}
+
+/* Titres internes aux cartes */
+.flex-elem h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.texte {
+    margin-bottom: 25px;
+}
+
+.texte h3 {
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Paragraphes de texte standard */
+.flex-elem-p {
+    margin: 0;
+    text-align: justify;
+}
+
+.aste {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: right;
+}
+
+/* ==========================================================================
+   VERSION COMPACTE DES CIRCUITS (POUR ÉQUILIBRER LES COLONNES)
+   ========================================================================== */
+
+.discipline-section {
+    margin-bottom: 15px;
+}
+
+.discipline-title {
+    color: var(--primary-color) !important;
+    font-size: 1.2rem !important; /* Légèrement réduit pour gagner de la place */
+    font-weight: 700 !important;
+    border-bottom: 1px solid rgba(217, 217, 17, 0.3);
+    padding-bottom: 3px;
+    margin-bottom: 10px !important;
+}
+
+/* On réduit drastiquement le padding et les marges */
+.circuit-item {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--primary-color);
+    padding: 4px 10px; /* Padding vertical réduit au minimum (4px au lieu de 8px) */
+    margin-bottom: 6px;  /* Espace entre les lignes divisé par deux (6px au lieu de 12px) */
+    border-radius: 0 4px 4px 0;
+    
+    /* Astuce Flexbox pour aligner la ligne principale et le ravito sur la même ligne ou les condenser */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Alignement principal */
+.circuit-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.95rem; /* Taille de police légèrement plus discrète */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.circuit-name {
+    color: #ffffff;
+}
+
+.circuit-detail {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Infos ravitaillement plus discrètes et plus proches */
+.circuit-ravito {
+    margin: 1px 0 0 0; /* Collé juste sous la distance */
+    font-size: 0.82rem; /* Plus petit pour marquer la hiérarchie */
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* Réduction du séparateur entre VTT et Marche */
+.separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+    margin: 15px 0; /* Espace réduit autour du trait (15px au lieu de 30px) */
+}
+
+.trail-mention {
+    margin: -5px 0 12px 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.8;
+    color: #ffffff;
+    display: block;
+}
+
+/* ==========================================================================
+   DOCUMENTS (BOUTONS)
+   ========================================================================== */
+.documents-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.documents-container a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
-  
-a:hover {
-    background-color: rgb(217, 217, 17);
-    color: white;
+
+.documents-container a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateX(4px); /* Petit effet de glissement vers la droite au survol */
+}
+
+/* ==========================================================================
+   RESPONSIVE (MOBILE)
+   ========================================================================== */
+@media screen and (max-width: 650px) {
+    body {
+        padding: 2vh 10px;
+    }
+
+    .flex {
+        gap: 20px;
+    }
+
+    .flex-elem {
+        padding: 20px;
+        flex: 1 1 100%;
+    }
+
+    /* Sur mobile, on remet les colonnes de circuits l'une sous l'autre */
+    .circuits-group {
+        flex-direction: column;
+        gap: 0;
+    }
 }
